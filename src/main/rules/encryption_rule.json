@@ -1,0 +1,11 @@
+{ "ruleSet":
+    { "domainRules": [
+      { "name": "encryptPII",
+        "type": "ENCRYPT",
+        "tags":["PII"],
+        "params": { "encrypt.kek.name": "ce581594-3115-486e-b391-5ea874371e73", "encrypt.kms.type": "aws-kms", "encrypt.kms.key.id": "arn:aws:kms:us-east-1:586051073099:key/ce581594-3115-486e-b391-5ea874371e73" },
+        "onFailure": "NONE,NONE"}
+    ]
+    }
+}
+

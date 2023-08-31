@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "contact": {
+      "properties": {
+        "email": {
+          "format": "email",
+          "type": "string"
+        },
+        "mailingAddress": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "phoneNumber",
+        "mailingAddress"
+      ],
+      "type": "object"
+    },
+    "fare": {
+      "properties": {
+        "ticketPrice": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "ticketPrice"
+      ],
+      "type": "object"
+    },
+    "flight": {
+      "properties": {
+        "arrivalAirport": {
+          "type": "string"
+        },
+        "departureAirport": {
+          "type": "string"
+        },
+        "departureDateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "flightNumber": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "departureAirport",
+        "arrivalAirport",
+        "departureDateTime",
+        "flightNumber"
+      ],
+      "type": "object"
+    },
+    "itinerary": {
+      "properties": {
+        "totalTravelTime": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "passenger": {
+      "properties": {
+        "dateOfBirth": {
+          "format": "date",
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "dateOfBirth"
+      ],
+      "type": "object"
+    },
+    "payment": {
+      "properties": {
+        "creditCardInfo": {
+          "type": "string"
+        },
+        "paymentDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "creditCardInfo",
+        "paymentDate"
+      ],
+      "type": "object"
+    },
+    "seat": {
+      "properties": {
+        "seatNumber": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "seatNumber"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "passenger",
+    "contact",
+    "flight",
+    "seat",
+    "fare",
+    "payment",
+    "itinerary"
+  ],
+  "type": "object"
+}
